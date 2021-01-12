@@ -1,0 +1,31 @@
+Le schema de la db est initialisé, il s'agit du schema app dans la db claingca.
+
+Pour l'instant elle ne contient que les tables utilisateurs, objets, categorie qui ont 
+été initilisées avec certaines contraintes : vous pouvez les visuliser avec la commande
+\d+ <table name>.
+
+L'utilisateur claingca_app a les droits SELECT, INSERT pour le moment (pas long à changer,
+une fois que ça marche je met selon les besoin).
+
+Pour l'instant, y'a encore des issues avec le driver (ou pt 
+mon proxy, je vais essayer à partir de l'udem demain - ça devrait marcher comme je 
+parviens facilement à ouvrir mon localhost db) pour se connecter au serveur par java.
+
+Pour vous y cennecter de chez vous utiliser les commandes suivantes :
+(connectez vous au serveur du diro d'abord : 
+    - ssh <user_diro>@arcade.iro.umontreal.ca -L 1139:arcade:139    //(insérer votre user)
+    entrez votre mots de passe)
+    
+    - psql -h postgres -U claingca_app claingca
+    
+    - rentrez le password : IN33Dapp
+    
+    - set search_path to app;
+    
+    -\dt pour voir le shcema
+    
+    
+ Peace.
+ 
+ PS : Je peux joindre au git le code que j'essaie pour la connection par java.
+  
